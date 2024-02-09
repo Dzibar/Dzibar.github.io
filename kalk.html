@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator poprawek wer.1</title>
+    <link rel ="stylesheet" type="text/css" media="screen" href="stylkalk.css"/>
+    
+</head>
+<body>
+    <h1>Kalkulator poprawek do przestrzeliwania kbk. GROT</h1>
+    <p><h2>DYSTANS <form>
+        <input list="metry" id="wybórDystansu" placeholder="Wybierz Dystans">
+        <datalist id="metry" >
+          <option value="20">
+          <option value="25">
+          <option value="35">
+          <option value="50">
+        </datalist> </form>METRÓW</h2></p>
+
+    <table>
+        <caption> <h3>Wprowadż różnice pomiędzy punktem trafienia i punktem celowania</h3></caption>
+        <tr>
+            <th>Góra [cm]</th>
+            <th>Dół [cm]</th>
+            <th>Lewo [cm]</th>
+            <th>Prawo [cm]</th>
+        </tr>
+        <tr>
+            <td><input type="text" inputmode="numeric" placeholder="za wysoko o"             id="up"></td>
+            <td><input type="text" inputmode="numeric" placeholder="trzeba podwyższyć o"     id="dn"></td>
+            <td><input type="text" inputmode="numeric" placeholder="ŚPT za daleko w lewo"    id="l"> </td>
+            <td><input type="text" inputmode="numeric" placeholder="przesuń ŚPT w prawo o"   id="r"> </td>
+
+        </tr>
+        <tr>
+            <th>Wykręć muszkę <br/> [obrotów]</th>
+            <th>Wkręć muszkę <br/> [obrotów]</th>
+            <th>Przeziernik w prawo <br/> [klików]</th>
+            <th>Przeziernik w lewo <br/> [klików]</th>
+        </tr>
+        <td> <p id="poprUp"></p> </td>
+        <td> <p id="poprDn"></p> </td>
+        <td> <p id="poprL"></p> </td>
+        <td> <p id="poprR"></p> </td>
+            
+        </tr>
+    </table>
+
+    <button onclick="calc()">PRZELICZ</button> 
+    <button onclick="wyczysc()">WYCZYŚĆ</button>
+
+<script src=kalk.js></script>
+</body>
+</html>
