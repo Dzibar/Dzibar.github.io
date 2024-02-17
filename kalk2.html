@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator poprawek wer.2</title>
+    <link rel ="stylesheet" type="text/css" media="screen" href="stylkalk2.css"/>
+    
+</head>
+<body>>
+
+    <h1>Kalkulator poprawek <br>do przestrzeliwania kbk. GROT</h1>
+    <br>
+    <p><h2>Wprowadź dystans na którym przestrzeliwujesz karabinek [m] <form>
+        <input list="metry" id="wybórDystansu" placeholder="Wybierz Dystans">
+        <datalist id="metry" >
+          <option value="20">
+          <option value="25">
+          <option value="35">
+          <option value="50">
+        </datalist> </form></h2></p>
+        <br>
+    <h2>Odpowiedz na pytania! </h2>
+
+
+
+
+ <h4>Muszę przesunąć ŚPT w 
+    <select name="kierunek" id="kPion">
+        <option value="x">  </option>
+        <option value="prawo">prawo</option>
+        <option value="lewo">lewo</option>
+       </select>
+    o <td><input type="text" inputmode="numeric" placeholder="0,0"     size="5" id="wartPoziom"></td> [cm]</h4>
+
+
+    <h4>Muszę przesunąć
+        <select name="elewacja" id="elew">
+            <option value="y">  </option>
+            <option value="góra">górę</option>
+            <option value="dół">dół</option>
+           </select>
+           ŚPT o <td><input type="text" inputmode="numeric" placeholder="0,0"     size="5" id="wartPion"></td> [cm]</h4>
+
+           <br>
+
+
+
+           <h3>Teraz przelicz i wprowadż poprawki <br>
+            <button onclick="calc()">PRZELICZ</button> </h3>
+  
+    <div>
+
+        <p  id="2"></p>
+        <p  id="1"></p> 
+        
+    </div>
+        
+ 
+   
+    <button onclick="wyczysc()">WYCZYŚĆ</button>
+
+<script src=kalk2.js></script>
+</body>
+</html>
