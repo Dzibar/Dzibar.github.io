@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie nr.99</title>
+</head>
+<body>
+    <h1>Zadanie testowe nr. 99</h1>
+    <label for="klucz">Wprowadź swój klucz:</label><br>
+<input id="klucz" name="klucz">
+<button onclick="generuj()">Generuj kod</button>
+<h4>Twój kod potwierdzający wykonanie zadania to:</h4>
+<p id="gotowyKod"></p>
+
+
+<script>
+
+    var lat = '';
+    var lng = '';
+
+    if (!navigator.geolocation) {
+        throw new error("Brak dostępu do lokalizacji")
+    }
+
+    const options = {
+        enableHighAccuracy: true,
+        timeout:5000,
+        maximumAge:100000 
+    };
+
+    navigator.geolocation.getCurrentPosition(success, error, options);
+
+    function success(pos) {
+
+        console.log(pos)
+
+        lat = pos.coords.latitude;
+        lng = pos.coords.longitude;
+
+        //console.log(lat);
+        //console.log(lng);
+        
+
+    }
+
+    function error(err) {
+       if (err.code === 1){
+        alert("Musisz zezwolić na lokalizacje!");
+       }else{
+        alert("Problem z pozyskaniem lokalizacji");
+       }
+
+    }
+
+    
+
+    function generuj() {
+
+
+        console.log(lat);
+        console.log(lng);
+
+        const numerZadania ='99'; 
+
+        var time = new Date(),
+            dzień=time.getDate(),
+            godzina=time.getHours(),
+            minuta=time.getMinutes();
+        
+        let kluczOsobisty = parseInt(document.getElementById("klucz").value);
+        console.log(kluczOsobisty);
+    
+        const klucze = [452167, 839245, 706318, 524970, 163582, 795631, 248759, 610934, 387426, 914673, 572840, 396517, 825074, 137896, 609425, 485621, 257896, 740392, 182563, 963271, 526417, 349186, 810256, 675893, 314289, 732548, 615827, 489163, 276594]
+        
+        let test=klucze.includes(kluczOsobisty);
+        console.log(test)
+      
+        if (test==Boolean(true)){
+        
+        let szyfr =numerZadania+ '  '+`${kluczOsobisty}`+ ' '+`${dzień}`+ ' '+`${godzina}`+ ':'+`${minuta}`+ '  '+`${lat}`+ '   '+`${lng}`
+        console.log(szyfr)
+
+
+        let zaszyfrowane =btoa(szyfr)
+        console.log(zaszyfrowane)
+
+
+        document.getElementById("gotowyKod").innerHTML = zaszyfrowane;
+
+        var info=[]
+        info.push(time)
+        info.push(zaszyfrowane)
+        
+        var info_string = JSON.stringify(info)
+        console.log(info)
+
+        } else  alert("Błędny klucz osobisty!");
+    }
+    </script>
+</body>
+</html>
