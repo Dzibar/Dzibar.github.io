@@ -103,6 +103,7 @@ function sprawdź_klucz(){
     if (czy_Klucz_osobisty==Boolean(true)){
         document.getElementById("poprawność_klucza").innerHTML = "Klucz poprawny!"
         //console.log("klucz poprawny")
+generujBtn.removeAttribute('disabled');
          
     }
     else document.getElementById("poprawność_klucza").innerHTML = "Klucz niepoprawny!"
