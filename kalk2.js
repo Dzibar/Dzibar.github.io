@@ -54,16 +54,16 @@ console.log(dystans);
 
     var dokrPrzez = "Dokręć przeziernik o "
     var wykrPrzez = "Wykręć przeziernik o "
-    var odpKier2 = " klików (kręć w prawo, w kierunku lufy)"
-    var odpKier1 = " klików (kręć w lewo, w kierunku kolby)"
+    var odpKier1 = " klików (kręć w prawo, w kierunku lufy)"
+    var odpKier2 = " klików (kręć w lewo, w kierunku kolby)"
 
 
-    if (kierunek == "lewo"){
+    if (kierunek == "prawo"){
 
         document.getElementById("1").innerHTML = `${dokrPrzez}${poprKier}${odpKier1}`;
         } 
 
-    else if (kierunek == "prawo"){
+    else if (kierunek == "lewo"){
 
          document.getElementById("1").innerHTML = `${wykrPrzez}${poprKier}${odpKier2}`;
     } 
