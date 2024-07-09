@@ -54,8 +54,8 @@ console.log(dystans);
 
     var dokrPrzez = "Dokręć przeziernik o "
     var wykrPrzez = "Wykręć przeziernik o "
-    var odpKier1 = " klików (kręć w prawo, w kierunku lufy)"
-    var odpKier2 = " klików (kręć w lewo, w kierunku kolby)"
+    var odpKier2 = " klików (kręć w prawo, w kierunku lufy)"
+    var odpKier1 = " klików (kręć w lewo, w kierunku kolby)"
 
 
     if (kierunek == "lewo"){
