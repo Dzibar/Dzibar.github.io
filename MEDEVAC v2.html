@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDEVAC</title>
+</head>
+
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table {
+    margin: auto;
+    width: 85%;
+    padding: 5px;
+  }
+
+  td {
+    width: 10px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  th {
+    text-align: left;
+    padding: 5px;
+  }
+  
+  .tytuł{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+</style>
+<body>
+  <div class="tytuł"><h2>9 line MEDEVAC</h2></div>
+  <table>
+    <tr>
+      <td><h1>1</h1></td>
+      <th><b>WSPÓŁRZĘDNE PUNKTU PODEJĘCIA</b><br>
+        <input type="text" id="gridy" name="gridy"><br></th>
+    </tr>
+
+    <tr>
+      <td><h1>2</h1></td>
+      <th><b>CZ.RADIOWA, KRYPTONIM, crypto/plaintext</b><br><br>
+        <input type="text" id="częstotliwość" name="częstotliwość" placeholder="częstotliwość">
+        <input type="text" id="kryptonim" name="kryptonim" placeholder="kryptonim"><br></th>
+    </tr>
+      
+    <tr>
+      <td><h1>3</h1></td>
+      <th><b>Liczba pacjentów ze względu na priorytet</b><br><br>
+      A-<select name="liczba A3" id="Liczba A3">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select> pilny (2h) &#160&#160&#160&#160 
+      
+      B-<select name="liczba B3" id="Liczba B3">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option></select> priorytetowy (4h) &#160&#160&#160&#160 <br><br>
+        
+        C-<select name="liczba C3" id="Liczba C3">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option></select> rutynowy (24h)</th>
+    </tr>
+
+    <tr>
+      <td><h1>4</h1></td>
+      <th><b>Sprzęt specjalistyczny</b><br><br>
+        <input type="checkbox" id="A4" name="A4" value="brak"> A-brak &#160&#160&#160&#160 
+      <input type="checkbox" id="B4" name="B4" value="wyciągarka"> B-wyciągarka &#160&#160&#160&#160 <br><br>
+      <input type="checkbox" id="C4" name="C4" value="sprzęt ekstrakcyjny"> C-sprzęt ekstrakcyjny &#160&#160&#160&#160 
+      <input type="checkbox" id="D4" name="D4" value="respirator"> D-respirator</th>
+    </tr>
+
+    <tr>
+      <td><h1>5</h1></td>
+      <th><b>Liczba pacjentów ze względu na typ</b><br><br>
+      L-<select name="liczba L5" id="Liczba L5">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option></select>leżący &#160&#160&#160&#160 
+        A-<select name="liczba A5" id="Liczba A5">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option></select>siedzący</th>
+    </tr>
+
+    <tr>
+      <td><h1>6</h1></td>
+      <th><b>Bepieczeństwo w rejonie podjęcia</b><br><br>
+      <input type="checkbox" id="A4" name="A4" value="brak npl."> N-brak npl. &#160&#160&#160&#160  
+      <input type="checkbox" id="B4" name="B4" value="możliwy npl."> P-możliwy npl. &#160&#160&#160&#160 <br><br>
+      <input type="checkbox" id="C4" name="C4" value="wróg w rejonie"> E-wróg w rejonie &#160&#160&#160&#160 
+      <input type="checkbox" id="D4" name="D4" value="kontakt ogniowy"> X-kontakt ogniowy</td>
+       </th>
+    </tr>
+    
+    <tr>
+      <td><h1>7</h1></td>
+      <th><b>Oznaczenie punktu podjęcia</b><br><br>
+        <input type="checkbox" id="A7" name="A7" value="panel"> A-panel &#160&#160&#160&#160 
+        <input type="checkbox" id="B7" name="B7" value="piro"> B-piro &#160&#160&#160&#160 
+        <input type="checkbox" id="C7" name="C7" value="dym"> C-dym &#160&#160&#160&#160 
+        <input type="checkbox" id="D7" name="D7" value="brak"> D-brak &#160&#160&#160&#160 <br>
+        <input type="checkbox" id="E7" name="E7" value="inne"> E-inne <input type="text" id="ozn punktu" name="ozn punktu" 
+        size="15" placeholder="jakie?"></th>
+    </tr>
+
+    <tr>
+      <td><h1>8</h1></td>
+      <th><b>Liczba pacjentów status</b><br><br>
+        <input type="checkbox" id="A8" name="A8" value="żołnierz koalicji"> A-żołnierz koalicji &#160&#160&#160&#160 
+        <input type="checkbox" id="B8" name="B8" value="cywil koalicji"> B-cywil koalicji &#160&#160&#160&#160 <br>
+        <input type="checkbox" id="C8" name="C8" value="żołnierz spoza koalicji"> C-żołnierz spoza koalicji &#160&#160&#160&#160 <br>
+        <input type="checkbox" id="D8" name="D8" value="cywil"> D-cywil &#160&#160&#160&#160 
+        <input type="checkbox" id="E8" name="E8" value="jeniec"> E-jeniec/HVT</th>
+    </tr>
+
+      <tr>
+        <td><h1>9</h1></td>
+        <th><b>Zagrożenie NBC, opis terenu, uzupełnienie apteczki</b><br><br>
+          <input type="text" id="opis terenu" name="opis terenu" size="50" placeholder="opisać słownie">
+        </th>
+      </tr>
+  </table>
+</body>
+</html>
