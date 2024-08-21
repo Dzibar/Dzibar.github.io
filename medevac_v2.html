@@ -7,6 +7,9 @@
 </head>
 
 <style>
+  body{
+    margin: 2px;
+  }
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -22,41 +25,45 @@
   td {
     width: 10px;
     text-align: center;
-    padding: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
 
   th {
     text-align: left;
-    padding: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     width: 340px;
   }
   
   .tytuł{
     width: 75%;
     height: 15px;
-    padding-bottom: 20px;
-    margin: 10px;
+    padding-bottom: 3px;
+    margin-left: 115px;
+    margin-bottom: 9px;
+    text-align: left;
   }
 </style>
 <body>
-  <div class="tytuł"><h2>9 line MEDEVAC</h2></div>
+  <div class="tytuł"><h2>MEDEVAC</h2></div>
   <table>
     <tr>
       <td><h1>1</h1></td>
-      <th><b>WSPÓŁRZĘDNE PUNKTU PODEJĘCIA</b><br>
+      <th><b>WSPÓŁRZĘDNE PUNKTU PODEJĘCIA:</b><br>
         <input type="text" id="gridy" name="gridy"><br></th>
     </tr>
 
     <tr>
       <td><h1>2</h1></td>
-      <th><b>CZ.RADIOWA, KRYPTONIM, crypto/plaintext</b><br><br>
+      <th><b>CZ.RADIOWA, KRYPTONIM:</b><br><br>
         <input type="text" id="częstotliwość" name="częstotliwość" placeholder="częstotliwość" size="15">
         <input type="text" id="kryptonim" name="kryptonim" placeholder="kryptonim" size="12"><br></th>
     </tr>
       
     <tr>
       <td><h1>3</h1></td>
-      <th><b>Liczba pacjentów ze względu na priorytet</b><br><br>
+      <th><b>Liczba pacjentów ze względu na priorytet:</b><br><br>
       A-<select name="liczba A3" id="Liczba A3">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -94,7 +101,7 @@
 
     <tr>
       <td><h1>4</h1></td>
-      <th><b>Sprzęt specjalistyczny</b><br><br>
+      <th><b>Sprzęt specjalistyczny:</b><br><br>
         <input type="checkbox" id="A4" name="A4" value="brak"> A-brak &#160&#160&#160&#160 
       <input type="checkbox" id="B4" name="B4" value="wyciągarka"> B-wyciągarka &#160&#160&#160&#160 <br>
       <input type="checkbox" id="C4" name="C4" value="sprzęt ekstrakcyjny"> C-sprzęt ekstrakcyjny &#160&#160&#160&#160 
@@ -103,7 +110,7 @@
 
     <tr>
       <td><h1>5</h1></td>
-      <th><b>Liczba pacjentów ze względu na typ</b><br><br>
+      <th><b>Liczba pacjentów ze względu na typ:</b><br><br>
       L-<select name="liczba L5" id="Liczba L5">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -128,7 +135,7 @@
 
     <tr>
       <td><h1>6</h1></td>
-      <th><b>Bepieczeństwo w rejonie podjęcia</b><br><br>
+      <th><b>Bepieczeństwo w rejonie podjęcia:</b><br><br>
       <input type="checkbox" id="A4" name="A4" value="brak npl."> N-brak npl. &#160&#160&#160&#160  
       <input type="checkbox" id="B4" name="B4" value="możliwy npl."> P-możliwy npl. &#160&#160&#160&#160 <br>
       <input type="checkbox" id="C4" name="C4" value="wróg w rejonie"> E-wróg w rejonie &#160&#160&#160&#160 
@@ -138,7 +145,7 @@
     
     <tr>
       <td><h1>7</h1></td>
-      <th><b>Oznaczenie punktu podjęcia</b><br><br>
+      <th><b>Oznaczenie punktu podjęcia:</b><br><br>
         <input type="checkbox" id="A7" name="A7" value="panel"> A-panel &#160&#160&#160&#160 
         <input type="checkbox" id="B7" name="B7" value="piro"> B-piro &#160&#160&#160&#160 
         <input type="checkbox" id="C7" name="C7" value="dym"> C-dym &#160&#160&#160&#160 
@@ -149,12 +156,67 @@
 
     <tr>
       <td><h1>8</h1></td>
-      <th><b>Liczba pacjentów status</b><br><br>
-        <input type="checkbox" id="A8" name="A8" value="żołnierz koalicji"> A-żołnierz koalicji &#160&#160&#160&#160 
-        <input type="checkbox" id="B8" name="B8" value="cywil koalicji"> B-cywil koalicji &#160&#160&#160&#160 <br>
-        <input type="checkbox" id="C8" name="C8" value="żołnierz spoza koalicji"> C-żołnierz spoza koalicji &#160&#160&#160&#160 <br>
-        <input type="checkbox" id="D8" name="D8" value="cywil"> D-cywil &#160&#160&#160&#160 
-        <input type="checkbox" id="E8" name="E8" value="jeniec"> E-jeniec/HVT</th>
+      <th><b>Liczba pacjentów status:</b><br><br>
+
+        A-<select name="liczba A8" id="Liczba A8">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select> żołnierz koalicji &#160&#160&#160&#160 
+
+        B-<select name="liczba B8" id="Liczba B8">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>cywil koalicji &#160&#160&#160&#160 <br><br>
+
+        C-<select name="liczba C8" id="Liczba C8">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>żołnierz spoza koalicji &#160&#160&#160&#160 <br><br>
+
+        D-<select name="liczba D8" id="Liczba D8">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>cywil &#160&#160&#160&#160
+
+        E-<select name="liczba E8" id="Liczba E8">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>jeniec/HVT</th>
     </tr>
 
       <tr>
